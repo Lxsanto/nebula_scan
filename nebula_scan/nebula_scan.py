@@ -33,7 +33,7 @@ class SubdomainFinder:
         self.domain = domain
         self.subdomains = {}
         self.resolver = aiodns.DNSResolver()
-        self.semaphore = asyncio.Semaphore(1000)  # Limit concurrent tasks
+        self.semaphore = asyncio.Semaphore(1000)  
 
     async def run(self):
         start_time = time.time()
@@ -125,7 +125,7 @@ class SubdomainFinder:
 
     async def add_subdomain(self, subdomain, source):
         if subdomain.endswith(self.domain) and subdomain != self.domain:
-            # Rimuovi il wildcard se presente
+            
             if subdomain.startswith('*.'):
                 subdomain = subdomain[2:]
             if subdomain not in self.subdomains:
@@ -138,7 +138,7 @@ class SubdomainFinder:
 
     async def get_info(self, subdomain):
         try:
-            # Salta il recupero delle informazioni per i wildcard DNS
+            
             if subdomain.startswith('*'):
                 self.subdomains[subdomain]["info"] = "Wildcard DNS record"
                 return
@@ -147,25 +147,25 @@ class SubdomainFinder:
                 try:
                     ip = socket.gethostbyname(subdomain)
                 except socket.gaierror:
-                    # Se non riusciamo a risolvere il nome, passiamo al prossimo
+                    
                     self.subdomains[subdomain]["info"] = "Unable to resolve"
                     return
 
                 self.subdomains[subdomain]["ip"] = ip
 
-                # Check if IP is internal
+                
                 is_internal = ipaddress.ip_address(ip).is_private
                 self.subdomains[subdomain]["is_internal"] = is_internal
 
-                # Get open ports
+                
                 open_ports = await self.check_ports(ip)
                 self.subdomains[subdomain]["open_ports"] = open_ports
 
-                # Get HTTP server info
+                
                 if 80 in open_ports:
                     self.subdomains[subdomain]["http_server"] = await self.get_http_server(subdomain)
 
-                # Get HTTPS info
+                
                 if 443 in open_ports:
                     ssl_info = await self.get_ssl_info(subdomain)
                     self.subdomains[subdomain].update(ssl_info)
@@ -241,7 +241,7 @@ async def main():
 
     print(f"\n{Fore.YELLOW}[*] Total subdomains found: {len(subdomains)}{Style.RESET_ALL}")
     
-    # Generate output file
+    
     output_file = f"{args.domain}.txt"
     with open(output_file, 'w') as f:
         for subdomain, info in subdomains.items():
