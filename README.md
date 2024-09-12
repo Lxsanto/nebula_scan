@@ -1,5 +1,7 @@
 # NebulaScan
 
+<img width="704" alt="Screenshot 2024-09-12 alle 21 33 54" src="https://github.com/user-attachments/assets/e1c5e517-a7c8-41ee-b86f-93a85169ed96">
+
 NebulaScan is an ultra-fast,  subdomain scanner developed by Luca Lorenzi at Orizon.
 
 ## Features
