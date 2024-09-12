@@ -1,6 +1,6 @@
 # NebulaScan
 
-NebulaScan is an ultra-fast, interstellar subdomain scanner developed by Luca Lorenzi at Orizon.
+NebulaScan is an ultra-fast,  subdomain scanner developed by Luca Lorenzi at Orizon.
 
 ## Features
 
