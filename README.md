@@ -1,4 +1,6 @@
 # Orizon
+<img width="547" alt="Screenshot 2024-09-13 alle 18 53 46" src="https://github.com/user-attachments/assets/5f9e9b32-f86c-44c0-b04d-6279908ac698">
+<img width="510" alt="Screenshot 2024-09-13 alle 18 54 07" src="https://github.com/user-attachments/assets/53a2593c-f438-40f6-87e5-5febec936c74">
 
 **Orizon** è un'applicazione Python progettata per eseguire operazioni asincrone avanzate nel contesto del networking. Utilizza librerie come `aiohttp` e `aiodns` per gestire richieste HTTP asincrone e risoluzioni DNS, offrendo anche funzionalità di logging dettagliato.
 
