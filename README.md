@@ -56,3 +56,39 @@ Esegui il programma dal terminale:
 
 ```bash
 python orizon1.py [opzioni]
+
+Opzioni Disponibili
+--help: Mostra l'aiuto e le opzioni disponibili.
+--config <file>: Specifica un file di configurazione personalizzato (es. --config orizon.ini).
+--timeout <secondi>: Imposta un timeout per le operazioni di rete.
+--output <directory>: Specifica la directory di output.
+Esempi
+Esecuzione di base:
+
+bash
+Copia codice
+python orizon1.py --config orizon.ini
+Esecuzione con timeout personalizzato:
+
+bash
+Copia codice
+python orizon1.py --timeout 20
+Salvataggio dei risultati in una directory specifica:
+
+bash
+Copia codice
+python orizon1.py --output ./risultati
+Logging
+Il programma genera un file di log denominato orizon.log nella directory corrente. Questo file include informazioni dettagliate su ogni operazione effettuata, utile per il debugging e il monitoraggio delle prestazioni.
+
+Il livello di logging predefinito è DEBUG, ma può essere modificato nel file di configurazione.
+Contributi
+Se desideri contribuire al progetto, segui questi passaggi:
+
+Fai un fork del repository.
+Crea una nuova branch per le tue modifiche (git checkout -b feature/nome-feature).
+Fai commit delle tue modifiche (git commit -am 'Aggiunta di una nuova feature').
+Fai push della branch (git push origin feature/nome-feature).
+Invia una pull request.
+Licenza
+Questo progetto è distribuito sotto la licenza MIT. Per ulteriori dettagli, consulta il file LICENSE.
