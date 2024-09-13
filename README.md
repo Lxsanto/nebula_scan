@@ -82,6 +82,7 @@ Logging
 Il programma genera un file di log denominato orizon.log nella directory corrente. Questo file include informazioni dettagliate su ogni operazione effettuata, utile per il debugging e il monitoraggio delle prestazioni.
 
 Il livello di logging predefinito è DEBUG, ma può essere modificato nel file di configurazione.
+
 Contributi
 Se desideri contribuire al progetto, segui questi passaggi:
 
@@ -90,5 +91,7 @@ Crea una nuova branch per le tue modifiche (git checkout -b feature/nome-feature
 Fai commit delle tue modifiche (git commit -am 'Aggiunta di una nuova feature').
 Fai push della branch (git push origin feature/nome-feature).
 Invia una pull request.
+
+
 Licenza
 Questo progetto è distribuito sotto la licenza MIT. Per ulteriori dettagli, consulta il file LICENSE.
