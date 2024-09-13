@@ -1,57 +1,58 @@
-# NebulaScan
+# Orizon
 
-<img width="704" alt="Screenshot 2024-09-12 alle 21 33 54" src="https://github.com/user-attachments/assets/e1c5e517-a7c8-41ee-b86f-93a85169ed96">
+**Orizon** è un'applicazione Python progettata per eseguire operazioni asincrone avanzate nel contesto del networking. Utilizza librerie come `aiohttp` e `aiodns` per gestire richieste HTTP asincrone e risoluzioni DNS, offrendo anche funzionalità di logging dettagliato.
 
-NebulaScan is an ultra-fast,  subdomain scanner developed by Luca Lorenzi at Orizon.
+## Sommario
 
-## Features
+- [Requisiti di Sistema](#requisiti-di-sistema)
+- [Installazione](#installazione)
+- [Configurazione](#configurazione)
+- [Utilizzo](#utilizzo)
+- [Esempi](#esempi)
+- [Logging](#logging)
+- [Contributi](#contributi)
+- [Licenza](#licenza)
 
-- Passive subdomain enumeration from multiple sources (crt.sh, VirusTotal, AlienVault, ThreatCrowd, HackerTarget)
-- Brute-force subdomain discovery
-- Additional information gathering for each subdomain (IP, open ports, HTTP server info, SSL details)
-- Asynchronous operations for improved performance
-- Colorful console output
-- Results saved to a text file
+## Requisiti di Sistema
 
-## Installation
+- **Python**: Versione 3.7 o superiore
+- **pip**: Versione più recente
 
-1. Clone this repository:
-   ```
-   git clone https://github.com/yourusername/nebulascan.git
-   cd nebulascan
-   ```
+## Installazione
 
-2. Install the required dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
+1. **Clona il repository** o scarica i file nel tuo sistema locale:
 
-## Usage
+    ```bash
+    git clone https://github.com/tuo-username/orizon.git
+    cd orizon
+    ```
 
-Run the script with a target domain:
+2. **Installa le dipendenze** utilizzando `pip`:
 
-```
-python nebulascan.py example.com
-```
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-Replace `example.com` with the domain you want to scan.
+## Configurazione
 
-## Output
+1. **File di Configurazione**:
 
-The script will display results in the console and save detailed information to a file named `[domain].txt` in the current directory.
+    Orizon utilizza un file di configurazione per gestire le impostazioni dell'applicazione. Puoi creare un file di configurazione denominato `orizon.ini` nella directory principale. Ecco un esempio di file `orizon.ini`:
 
-## Disclaimer
+    ```ini
+    [DEFAULT]
+    log_level = DEBUG
+    output_directory = ./output
+    timeout = 10
+    ```
 
-Use this tool responsibly and only on domains you have permission to scan. The authors are not responsible for any misuse or damage caused by this program.
+    - `log_level`: Livello di logging (es. DEBUG, INFO, WARNING).
+    - `output_directory`: Directory in cui salvare i risultati.
+    - `timeout`: Timeout per le operazioni di rete.
 
-## License
+## Utilizzo
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Esegui il programma dal terminale:
 
-## Author
-
-Luca Lorenzi
-
-## Company
-
-Orizon
+```bash
+python orizon1.py [opzioni]
